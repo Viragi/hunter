@@ -1,0 +1,23 @@
+.block{
+    margin: auto;
+    padding:30px;
+    display: inline-block;
+    vertical-align: top;
+    }
+
+.cell{
+  border: 1px solid black;  
+  padding: 5px;
+  width: 100%;
+}
+
+.header{
+  border: 1px solid black;  
+  padding: 5px;
+  width: 100%;
+}
+
+.tablecontainer{
+  width: 100%;
+  align-content: center;
+}
