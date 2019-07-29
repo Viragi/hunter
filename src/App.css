@@ -96,3 +96,6 @@ body{
 .c-header-4{
   background-color: #E8741E;
 }
+.none{
+  visibility: hidden;
+}

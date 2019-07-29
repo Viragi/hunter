@@ -16,7 +16,11 @@ class Board extends React.Component{
             },{
                 heading: "Finished Task",
                 toDos:[]
-            }]
+            },{
+                heading: "To Be Reviewed Task",
+                toDos:[]
+            }],
+            headerColor: ["c-header-1","c-header-2","c-header-3","c-header-4"]
         }        
     }
 
@@ -54,85 +58,14 @@ class Board extends React.Component{
                     handleClick={(isLeft, row) => this.handleClick(isLeft, index, row)} 
                     handleAddRow ={this.handleAddRow}
                     colLength={this.state.tasks.length}
-                    
+                    headerColor={this.state.headerColor[index]}
                     />
             )
         });
         return(
         <div>
             <div className="tablecontainer">
-                {/* {elem} */}
-                <div className="column">
-                    <div className="cell col-header c-header-1">Todo</div>
-                    <div className="cells">
-                        <div className="cell">
-                            <div className="left-arrow">&lt;</div>
-                            <div className="cell-content">First task</div>
-                            <div className="right-arrow">&gt;</div>
-                        </div>
-                        <div className="cell">
-                            <div className="left-arrow">&lt;</div>
-                            <div className="cell-content">Second task</div>
-                            <div className="right-arrow">&gt;</div>
-                        </div>
-                    </div>
-                    <div className="col-footer">
-                        <div className="addIcon">+</div>
-                        <div className="add">Add a task</div>
-                    </div>
-                </div>
-                <div className="column">
-                <div className="cell col-header c-header-2">In Process</div>
-                <div className="cells">
-                        <div className="cell">
-                            <div className="left-arrow">&lt;</div>
-                            <div className="cell-content">First task</div>
-                            <div className="right-arrow">&gt;</div>
-                        </div>
-                        <div className="cell">
-                            <div className="left-arrow">&lt;</div>
-                            <div className="cell-content">Second task</div>
-                            <div className="right-arrow">&gt;</div>
-                        </div>
-                    </div>
-                    <div className="col-footer">
-                        <div className="addIcon">+</div>
-                        <div className="add">add task</div>
-                    </div>
-                </div>
-                <div className="column">
-                <div className="cell col-header c-header-3">To be reviewed</div>
-                <div className="cells">
-                        <div className="cell">
-                            <div className="left-arrow">&lt;</div>
-                            <div className="cell-content">First task</div>
-                            <div className="right-arrow">&gt;</div>
-                        </div>
-                        <div className="cell">
-                            <div className="left-arrow">&lt;</div>
-                            <div className="cell-content">Second task</div>
-                            <div className="right-arrow">&gt;</div>
-                        </div>
-                    </div>
-                    <div className="col-footer">
-                        <div className="addIcon">+</div>
-                        <div className="add">add task</div>
-                    </div>
-                </div>
-                <div className="column">
-                <div className="cell col-header c-header-4">Finished</div>
-                <div className="cells">
-                        <div className="cell">
-                            <div className="left-arrow">&lt;</div>
-                            <div className="cell-content">First task</div>
-                            <div className="right-arrow">&gt;</div>
-                        </div>
-                    </div>
-                    <div className="col-footer">
-                        <div className="addIcon">+</div>
-                        <div className="add">add task</div>
-                    </div>
-                </div>
+                {elem}
             </div>
         </div>
         )

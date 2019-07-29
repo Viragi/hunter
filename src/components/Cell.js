@@ -4,14 +4,14 @@ export default function Cell(props){
     return (
         (<div className="cell" >
                 {props.colIndex > 0 ? 
-                    (<i className="fas fa-arrow-left" 
-                        onClick={()=>props.handleClick(true)} />) 
-                    : null}   
-                {props.data}
+                    (<div className="left-arrow" 
+                        onClick={()=>props.handleClick(true)}>&lt; </div>) 
+                    : <div className="left-arrow none"></div>}  
+                    <div className="cell-content">{props.data}</div> 
                 {props.colIndex < props.colLength-1  ?
-                     (<i className="fas fa-arrow-right" 
-                        onClick={()=>props.handleClick(false)} />) 
-                    : null}
+                     (<div className="right-arrow" 
+                        onClick={()=>props.handleClick(false)}>&gt; </div>) 
+                    : <div className="right-arrow none"></div>}
             </div>)
     )
 

@@ -14,10 +14,16 @@ class Column extends React.Component{
         });
 
         return(
-            <div className="block">
-                <div className="header">{this.props.colDetails.heading}</div>
-                {coldata}
-                <div className="addrow" onClick={()=>this.props.handleAddRow(this.props.colIndex)}>Add Row +</div>
+            <div className="column">
+                <div className={this.props.headerColor+ "  cell col-header" }>{this.props.colDetails.heading}</div>
+                <div className="cells">
+                    {coldata}
+                    <div className="col-footer" onClick={()=>this.props.handleAddRow(this.props.colIndex)}>
+                        <div className="addIcon"> + </div>
+                        <div className="add"> Add a Task</div>
+                    </div>
+                </div>
+                
             </div>
         )
     }
