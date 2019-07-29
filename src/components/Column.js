@@ -17,6 +17,7 @@ class Column extends React.Component{
             <div className="block">
                 <div className="header">{this.props.colDetails.heading}</div>
                 {coldata}
+                <div className="addrow" onClick={()=>this.props.handleAddRow(this.props.colIndex)}>Add Row +</div>
             </div>
         )
     }
